@@ -17,8 +17,8 @@ class CreateTransactionsTable extends Migration
             $table->id();
             $table->integer('from_client_id')->nullable();
             $table->integer('to_client_id')->nullable();
-            $table->integer('product_id');
-            $table->decimal('amount',10,2);
+            $table->integer('product_id')->nullable();
+            $table->string('amount')->nullable();
             $table->string('balance_before');
             $table->string('balance_after');
             $table->text('details');
